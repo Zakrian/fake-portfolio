@@ -318,9 +318,9 @@ main {
 }
 
 .about__item_left {
-  max-width: 276px;
-  max-height: 276px;
-  padding: 10px;
+  max-width: 296px;
+  max-height: 296px;
+  padding: 20px;
   margin-bottom: 40px;
   overflow: hidden;
 }
