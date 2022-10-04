@@ -1,0 +1,29 @@
+.footer {
+	flex: 0 0 auto;
+	display: flex;
+	align-items: center;
+	height: 180px;
+	/* .footer__content */
+	&__content {
+		max-width: 300px;
+		margin: 0 auto;
+		text-align: center;
+	}
+	/* .footer__social */
+	&__social {
+		margin-bottom: 26px;
+		a {
+			transition: opacity .2s ease .05s;
+			&:not(:last-child) {
+				margin-right: 35px;
+			}
+			&:hover {
+				opacity: 0.8;
+			}
+		}
+		span {
+			font-size: 30px;
+		}
+	}
+}
+

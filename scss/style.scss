@@ -1,0 +1,144 @@
+// Подключение шрифта по умолчанию ===============================
+@import url("https://fonts.googleapis.com/css?family=Heebo:regular,500,700,900&display=swap");
+
+// Обнуление стилей ==============================================
+@import "components/null";
+@import "setting-file/icon-font";
+
+// Переменные ====================================================
+$dark-color: #21243d;
+$light-color: #8695a4;
+$gray-color: #E0E0E0;
+$bg-light-color: #edf7fa;
+$white-color: #fff;
+$primary-color: #ff6464;
+$hover-color: #e32626;
+$secondary-color: #00a8cc;
+
+// Основные стили проекта ========================================
+// Контейнер, отступы, размеры и цвет шрифта, кнопки, бургер и т.п.
+html, body {
+	height: 100%;
+}
+
+body {
+	font-family: "Heebo", sans-serif;
+	background-color: $white-color;
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	// height: 100%;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 2;
+	color: $dark-color;
+}
+
+main {
+	flex: 1 1 auto;
+}
+
+[class*="__container"] {
+	max-width: 888px;
+	height: 100%;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+[class*="__container-fluid"] {
+	max-width: 1064px;
+	height: 100%;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+[class*="__container-small"] {
+	max-width: 711px;
+	height: 100%;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+
+// Общие стили блоков и элементов =================================
+main {
+	padding-top: 80px;
+}
+
+//Заголовок секии
+.section {
+	/* .section__title */
+	&__title {
+		font-size: 22px;
+		line-height: 2.7;
+	}
+}
+
+//Заголовок и текст
+.item {
+	/* .item__title */
+	&__title {
+		font-weight: 700;
+	}
+	/* .item__text */
+	&__text {
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 1.5;
+	}
+}
+
+//Бургер иконка
+.icon-menu {
+	position: absolute;
+	top: 20px;
+	right: 18px;
+	z-index: 100;
+	width: 30px;
+	height: 20px;
+	background-color: transparent;
+	cursor: pointer;
+	span {
+		position: absolute;
+		display: block;
+		top: 50%;
+		width: 100%;
+		height: 1px;
+		background-color: $dark-color;
+		transition: all 0.2s ease 0s;
+		transform: translateY(-50%);
+		&:nth-child(1) {
+			top: 0;
+		}
+		&:nth-child(3) {
+			top: 100%;
+		}
+	}
+}
+
+._active__burger {
+	span {
+		&:nth-child(1) {
+			top: 50%;
+			transform: rotate(45deg);
+		}
+		&:nth-child(2) {
+			opacity: 0;
+			visibility: hidden;
+		}
+		&:nth-child(3) {
+			top: 50%;
+			transform: rotate(-45deg);
+		}
+	}
+}
+
+// Подключение файлов стилей =====================================
+@import "components/header";
+@import "components/index/about";
+@import "components/index/posts";
+@import "components/index/works";
+@import "components/blog/blog";
+@import "components/works/works";
+@import "components/works/works-detail";
+@import "components/footer";
